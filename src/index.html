@@ -98,55 +98,76 @@
           <div class="icon fa fa-phone"></div>
         </div>
       </div>
-    <script type="text/javascript">
-      var $stepperInput = $('.stepperInput input');
+      <div class="examplePanel">
+        <h3>This is a feature list</h3>
+        <div class="featureListItem">
+          <div class="featureListItem__icon">
+            <div class="icon fa fa-calendar"></div>
+          </div>
+          <div class="featureListItem__description">The calendar feature makes scheduling a snap</div>
+        </div>
+        <div class="featureListItem featureListItem--reverse">
+          <div class="featureListItem__icon">
+            <div class="icon fa fa-dashboard"></div>
+          </div>
+          <div class="featureListItem__description">Our dashboard gives you a bird&rsquo;s-eye-view-at-a-glance-on-the-go</div>
+        </div>
+        <div class="featureListItem">
+          <div class="featureListItem__icon">
+            <div class="icon fa fa-envelope"></div>
+          </div>
+          <div class="featureListItem__description">You can get notified by email or SMS</div>
+        </div>                
+      </div>
+      <script type="text/javascript">
+        var $stepperInput = $('.stepperInput input');
 
-      function incrementStepperInput(amount) {
-        $stepperInput.val((parseInt($stepperInput.val()) || 0) + amount);
-      }
+        function incrementStepperInput(amount) {
+          $stepperInput.val((parseInt($stepperInput.val()) || 0) + amount);
+        }
 
-      var stepperInputDecrement = $('.stepperInput button')[0];
-      $(stepperInputDecrement).click(function() {
-        incrementStepperInput(-1);
-      });
+        var stepperInputDecrement = $('.stepperInput button')[0];
+        $(stepperInputDecrement).click(function() {
+          incrementStepperInput(-1);
+        });
 
-      var stepperInputIncrement = $('.stepperInput button')[1];
-      $(stepperInputIncrement).click(function() {
-        incrementStepperInput(1);
-      });
-    </script>
-    <script type="text/javascript">
-      'use strict';
+        var stepperInputIncrement = $('.stepperInput button')[1];
+        $(stepperInputIncrement).click(function() {
+          incrementStepperInput(1);
+        });
+      </script>
+      <script type="text/javascript">
+        'use strict';
 
-      var $tabs = $('.tabs .tab');
+        var $tabs = $('.tabs .tab');
 
-      $tabs.click(function(event) {
-        var selectedClass = 'is-tab-selected';
-        $tabs.removeClass(selectedClass);
-        $(event.target).addClass(selectedClass);
-      });    
-    </script>
-    <script type="text/javascript">
-      'use strict';
+        $tabs.click(function(event) {
+          var selectedClass = 'is-tab-selected';
+          $tabs.removeClass(selectedClass);
+          $(event.target).addClass(selectedClass);
+        });    
+      </script>
+      <script type="text/javascript">
+        'use strict';
 
-      var $siteHeaderItems = $('.siteHeader .siteHeader__item');
+        var $siteHeaderItems = $('.siteHeader .siteHeader__item');
 
-      $siteHeaderItems.click(function(event) {
-        var selectedClass = 'is-site-header-item-selected';
-        $siteHeaderItems.removeClass(selectedClass);
-        $(event.target).addClass(selectedClass);
-      });
-    </script>
-    <script type="text/javascript">
-      'use strict';
+        $siteHeaderItems.click(function(event) {
+          var selectedClass = 'is-site-header-item-selected';
+          $siteHeaderItems.removeClass(selectedClass);
+          $(event.target).addClass(selectedClass);
+        });
+      </script>
+      <script type="text/javascript">
+        'use strict';
 
-      var $sideBarItems = $('.sideBar .sideBar__item');
+        var $sideBarItems = $('.sideBar .sideBar__item');
 
-      $sideBarItems.click(function(event) {
-        var selectedClass = 'is-side-bar-item-selected';
-        $sideBarItems.removeClass(selectedClass);
-        $(event.target).addClass(selectedClass);
-      });
+        $sideBarItems.click(function(event) {
+          var selectedClass = 'is-side-bar-item-selected';
+          $sideBarItems.removeClass(selectedClass);
+          $(event.target).addClass(selectedClass);
+        });
      </script>
     </body>
 </html>
