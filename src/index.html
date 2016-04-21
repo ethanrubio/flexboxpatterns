@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Flexbox Practice</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+      <div>
+        <h3>This is stepper input</h3>
+        <div class="stepperInput">
+          <button class="button button--addOnLeft">-</button>
+          <input type="text" placeholder="Age" value="32" class="stepperInput_input" />
+          <button class="button button--addOnRight">+</button>
+        </div>
+      </div>
+      
+    </body>
+    <script type="text/javascript">
+      var $stepperInput = $('.stepperInput input');
+
+      function incrementStepperInput(amount) {
+        $stepperInput.val((parseInt($stepperInput.val()) || 0) + amount);
+      }
+
+      var stepperInputDecrement = $('.stepperInput button')[0];
+      $(stepperInputDecrement).click(function() {
+        incrementStepperInput(-1);
+      });
+
+      var stepperInputIncrement = $('.stepperInput button')[1];
+      $(stepperInputIncrement).click(function() {
+        incrementStepperInput(1);
+      });
+    </script>
+</html>

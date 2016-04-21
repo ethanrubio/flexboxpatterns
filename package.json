@@ -1,0 +1,23 @@
+{
+  "name": "flexboxpatterns",
+  "version": "1.0.0",
+  "description": "practice with flexbox patterns",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "sass src/index.scss:dist/styles.css && node_modules/.bin/postcss --local-plugins --use autoprefixer --autoprefixer.browsers 'last 2 versions' -o dist/styles.css dist/styles.css && cp src/index.html dist/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ethanrubio/flexboxpatterns.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ethanrubio/flexboxpatterns/issues"
+  },
+  "homepage": "https://github.com/ethanrubio/flexboxpatterns#readme",
+  "dependencies": {
+    "autoprefixer": "^6.3.6",
+    "postcss-cli": "^2.5.1"
+  }
+}
