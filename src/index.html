@@ -7,13 +7,15 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+        <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700|Ubuntu+Mono" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
-
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-      <div>
+      <h1 class="title">Flexbox Patterns Examples</h1>
+      <div class="examplePanel">
         <h3>This is stepper input</h3>
         <div class="stepperInput">
           <button class="button button--addOnLeft">-</button>
@@ -21,7 +23,7 @@
           <button class="button button--addOnRight">+</button>
         </div>
       </div>
-      <div>
+      <div class="examplePanel">
         <h3>These are tabs</h3>
         <div class="tabs">
           <div class="tab is-tab-selected">Tab 1</div>
@@ -29,6 +31,40 @@
           <div class="tab">Tab 3</div>
           <div class="tab">Tab 4</div>
         </div>  
+      </div>
+      <div class="examplePanel">
+        <h3>This a site header</h3>
+        <div class="siteHeader">
+          <div class="siteHeader__section">
+            <!-- This section gets pushed to the left side-->
+            <div class="siteHeader__logo">
+              <div class="fa fa-inbox"></div>
+            </div>
+            <div class="siteHeader__item siteHeaderButton is-site-header-item-selected">Inbox</div>
+            <div class="siteHeader__item siteHeaderButton">Sent</div>
+            <div class="siteHeader__item siteHeaderButton">Trash</div>
+          </div>
+          <!-- This section gets pushed to the right side-->
+          <div class="siteHeader__section">
+            <div class="siteHeader__item siteHeaderButton">Settings</div>
+          </div>
+        </div>
+      </div>
+      <div class="examplePanel">
+        <h3>This is a form footer</h3>
+        <div class="formFooter">
+          <!--This is the section that gets pushed to the left side-->
+          <div class="formFooter__section">
+            <div class="formFooter__item formFooterFeedback">
+              <div class="fa fa-spinner formFooterSpinner"></div>&nbsp;Saving...
+            </div>
+          </div>
+          <!--This is the section that gets pushed to the right-->
+          <div class="formFooter__section">
+            <div class="formFooter__item button button-clear">Reset</div>
+            <div class="formFooter__item button">Save</div>
+          </div>
+        </div>
       </div>
     <script type="text/javascript">
       var $stepperInput = $('.stepperInput input');
@@ -57,6 +93,17 @@
         $tabs.removeClass(selectedClass);
         $(event.target).addClass(selectedClass);
       });    
-    </script>      
+    </script>
+    <script type="text/javascript">
+      'use strict';
+
+      var $siteHeaderItems = $('.siteHeader .siteHeader__item');
+
+      $siteHeaderItems.click(function(event) {
+        var selectedClass = 'is-site-header-item-selected';
+        $siteHeaderItems.removeClass(selectedClass);
+        $(event.target).addClass(selectedClass);
+      });
+    </script>     
     </body>
 </html>
