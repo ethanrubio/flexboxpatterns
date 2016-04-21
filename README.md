@@ -1,11 +1,12 @@
-# flexboxpatterns
-Practice using Flexbox patterns
+# Flexbox Patterns Practice
+
+This repository contains the SCSS used for the
+components at [www.flexboxpatterns.com](http://www.flexboxpatterns.com) used for my own pratice.
 
 ## Getting started
 
-Assuming you have Node installed, you can install the project dependencies with
-`npm install`. This will install PostCSS and Autoprefixer; two critical tools
-for making your CSS cross-browser compatible.
+Assuming Node is installed, install the project dependencies with
+`npm install`. This will install PostCSS and Autoprefixer, which makes things cross-compatible for other browsers.
 
 This project also requires you have [SASS](http://sass-lang.com/) installed
 (`sudo gem install sass`).
@@ -14,7 +15,4 @@ This project also requires you have [SASS](http://sass-lang.com/) installed
 
 `npm run build`
 
-I've chosen to write the styles with SCSS since it's widely adopted and I've
-found that it makes me more productive. This command will compile the SCSS into
-CSS and add various vendor-prefixed properties. Open up `dist/index.html`
-to see a demo page of the various flexbox patterns in the browser.
+Runs a bash script to compile the necessary files to the dist folder
