@@ -66,6 +66,20 @@
           </div>
         </div>
       </div>
+      <div class="examplePanel">
+        <h3>This is a side bar</h3>
+        <div class="sideBar">
+          <!--This is the section that gets pushed to the top-->
+          <div class="sideBar__section">
+            <div class="sideBar__item is-side-bar-item-selected">Inbox</div>
+            <div class="sideBar__item">Contacts</div>
+            <div class="sideBar__item">Account</div>
+          </div>
+          <!--This is the section that gets pushed to the bottom-->
+          <div class="sideBar__section">
+            <div class="sideBar__item">Legal</div>
+          </div>
+        </div>
     <script type="text/javascript">
       var $stepperInput = $('.stepperInput input');
 
@@ -104,6 +118,17 @@
         $siteHeaderItems.removeClass(selectedClass);
         $(event.target).addClass(selectedClass);
       });
-    </script>     
+    </script>
+    <script type="text/javascript">
+      'use strict';
+
+      var $sideBarItems = $('.sideBar .sideBar__item');
+
+      $sideBarItems.click(function(event) {
+        var selectedClass = 'is-side-bar-item-selected';
+        $sideBarItems.removeClass(selectedClass);
+        $(event.target).addClass(selectedClass);
+      });
+     </script>
     </body>
 </html>
